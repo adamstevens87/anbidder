@@ -24,7 +24,7 @@ app.set('port', process.env.PORT || 5000);
 app.get('/token', function(req, res) {
 
   res.status(200).json({
-        message: 'Welcome to the project-name api'
+        message: 'Welcome to the AN Bidder api'
     });
     console.log("This is the request: " + req);
 });
