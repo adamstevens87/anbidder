@@ -23,9 +23,9 @@ app.use(express.static('public'));
  * setup is the same token used here.
  *
  */
-app.get('/webhook', function(req, res) {
+app.get('/token', function(req, res) {
 
-  }
+
 });
 
 
