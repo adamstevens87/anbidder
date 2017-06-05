@@ -12,8 +12,7 @@ const
 
 var app = express();
 app.set('port', process.env.PORT || 5000);
-app.set('view engine', 'ejs');
-app.use(express.static('public'));
+
 
 
 
@@ -27,6 +26,7 @@ app.get('/token', function(req, res) {
   res.status(200).json({
         message: 'Welcome to the project-name api'
     });
+    console.log("This is the request: " + req);
 });
 
 
