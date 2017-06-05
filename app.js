@@ -23,7 +23,8 @@ app.use(express.static('public'));
  *
  */
 app.get('/token', function(req, res) {
-console.log('Token endpoint', app.get('port'));
+
+ res.send('hello world');
 
 });
 
