@@ -7,10 +7,7 @@ const
   crypto = require('crypto'),
   express = require('express'),
   https = require('https'),
-  request = require('request'),
-  querystring = require('querystring'),
-  fs = require('fs');
-
+  request = require('request');
 
 
 var app = express();
@@ -26,38 +23,34 @@ app.set('port', process.env.PORT || 5000);
  */
 app.get('/token', function(req, res) {
 
-    // Build the post string from an object
-    var post_data = querystring.stringify({
-        'compilation_level' : 'ADVANCED_OPTIMIZATIONS',
-        'output_format': 'json',
-        'output_info': 'compiled_code',
-          'warning_level' : 'QUIET',
-          'js_code' : req
-    });
+  var request = require('request');
 
-    // An object of options to indicate where to post to
-    var post_options = {
-        host: 'https://an.barneym.sb.facebook.com/placementbid.ortb',
-        port: '80',
-        path: '/',
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-            'Content-Length': Buffer.byteLength(post_data)
-        }
-    };
+  // Set the headers
+  var headers = {
+      'User-Agent':       'Super Agent/0.0.1',
+      'Content-Type':     'application/x-www-form-urlencoded'
+  }
 
-    // Set up the request
-    var post_req = http.request(post_options, function(res) {
-        res.setEncoding('utf8');
-        res.on('data', function (chunk) {
-            console.log('Response: ' + chunk);
-        });
-    });
+  // Configure the request
+  var options = {
+      url: 'https://an.barneym.sb.facebook.com/placementbid.ortb',
+      method: 'POST',
+      headers: headers,
+      form: {"ext":{"platformid":873801679416180},"cur":["USD"],"displaymanagerver":"SDK VER?","site":"APP DETAILS?"}
+  }
 
-    // post the data
-    post_req.write(post_data);
-    post_req.end();
+  // Start the request
+  request(options, function (error, response, body) {
+      if (!error && response.statusCode == 200) {
+          // Print out the response body
+          console.log(body)
+      }
+  })
+
+
+
+
+
 
 
 
