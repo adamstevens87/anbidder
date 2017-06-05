@@ -24,8 +24,9 @@ app.use(express.static('public'));
  */
 app.get('/token', function(req, res) {
 
- res.send('hello world');
-
+  res.status(200).json({
+        message: 'Welcome to the project-name api'
+    });
 });
 
 
