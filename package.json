@@ -1,7 +1,7 @@
 {
-  "name": "iam-test",
+  "name": "anbidder",
   "version": "1.0.0",
-  "description": "Capture a moment, make a memory.",
+  "description": "Audience Network Bid Request.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adamstevens87/iam-test.git"
+    "url": "git+https://github.com/adamstevens87/anbidder.git"
   },
   "author": "ajstevens",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/adamstevens87/iam-test/issues"
+    "url": "https://github.com/adamstevens87/anbidderissues"
   },
   "dependencies": {
     "body-parser": "^1.15.0",
@@ -25,6 +25,6 @@
     "mongojs": "^2.4.0",
     "request": "^2.72.0"
   },
-  "homepage": "https://github.com/adamstevens87/iam-test#readme",
+  "homepage": "https://github.com/adamstevens87/anbidder#readme",
   "devDependencies": {}
 }
