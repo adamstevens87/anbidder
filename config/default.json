@@ -1,0 +1,6 @@
+{
+    "appSecret": "9e59601083a9304a5adba5e2ece01c18",
+    "pageAccessToken": "EAAVx4zhUaykBAJpOntNx7pPify3YZBcLrG11yrT3ejheA5je52nI0vvmyggjThwvyauhJanJcqVfLqRXA0EM9MVFa0tJ1DEXW74uzs3DtZBZCvaqZCKqONOCAkUTmRY86rZCVVZCfLY5jZAZC0ZBZB5Wstx3agMneRguglYXjQRqaubwZDZD",
+    "validationToken": "ici_and_me_verification",
+    "serverURL": "https://iam-test.herokuapp.com/webhook"
+}
