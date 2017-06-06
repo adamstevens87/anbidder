@@ -25,20 +25,6 @@ app.get('/token', function(req, res) {
 
   var request = require('request');
 
-  // Set the headers
-  var headers = {
-      'User-Agent':       'Super Agent/0.0.1',
-      'Content-Type':     'application/x-www-form-urlencoded'
-  }
-
-  // Configure the request
-  var options = {
-      url: 'https://an.barneym.sb.facebook.com/placementbid.ortb',
-      method: 'POST',
-      headers: headers,
-      form: {"ext":{"platformid":873801679416180},"cur":["USD"],"displaymanagerver":"SDK VER?","site":"APP DETAILS?"}
-  }
-
   // Start the request
   request(options, function (error, response, body) {
       if (!error && response.statusCode == 200) {
