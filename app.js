@@ -23,23 +23,6 @@ app.set('port', process.env.PORT || 5000);
  */
 app.get('/token', function(req, res) {
 
-  var request = require('request');
-
-  // Start the request
-  request(options, function (error, response, body) {
-      if (!error && response.statusCode == 200) {
-          // Print out the response body
-          console.log(body)
-      }
-  })
-
-
-
-
-
-
-
-
   res.status(200).json({
         message: 'Welcome to the AN Bidder api'
     });
